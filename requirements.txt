@@ -1,0 +1,4 @@
+Django==4.1.2
+django-browser-reload==1.6.0
+django-model-utils==4.3.1
+Faker==15.3.4
