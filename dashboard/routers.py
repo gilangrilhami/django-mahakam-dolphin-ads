@@ -6,7 +6,15 @@ class DashboardRouter:
 
     def db_for_read(self, model, **hints):
         """
-        Attempts to read auth and contenttypes models go to auth_db.
+        Attempts to read auth and contenttypes models go to `dashboard` db.
+        """
+        if model._meta.app_label == 'dashboard':
+            return 'dashboard'
+        return None
+
+    def db_for_write(self, model, **hints):
+        """
+        Attempts to write auth and contenttypes models go to `dashboard` db.
         """
         if model._meta.app_label == 'dashboard':
             return 'dashboard'
