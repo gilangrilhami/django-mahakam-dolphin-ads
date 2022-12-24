@@ -13,7 +13,42 @@ from advertisements.models import (
 fake = Faker()
 
 class Command(BaseCommand):
+
+    """
+    Populates the database with fake data for testing purposes.
+
+    This command creates 10 advertisers, with each advertiser having 5 campaigns.
+    Each campaign has 4 advertisement groups, and each advertisement group has 2 targeting rules.
+    Each targeting rule is associated with a random number of slots, and each advertisement group has 10 advertisements.
+    """
+
+    help = 'Populates the database with fake data for testing purposes'
+
     def handle(self, *args, **options):
+        """
+        This function generates dummy data for the advertisements app. It does so 
+        by creating advertisers, campaigns, advertisement groups, targeting rules, 
+        and advertisements.
+        
+        Advertisers, campaigns, advertisement groups, and targeting rules are created 
+        in a nested fashion, with advertisers containing campaigns, campaigns containing 
+        advertisement groups, and advertisement groups containing targeting rules.
+        
+        Each advertisement group also contains a number of advertisements. The number of 
+        advertisers, campaigns, advertisement groups, and targeting rules created, as 
+        well as the number of advertisements per advertisement group, is hardcoded and 
+        set to 10, 5, 4, and 2, respectively.
+
+        The function also randomly selects a number of slots to associate with each 
+        targeting rule, using the random module.
+
+        :param self: Access variables that belongs to the class
+        :param *args: Allow for an arbitrary number of arguments to be passed in
+        :param **options: Pass arguments to the command
+        :return: None
+
+        :doc-author: gilangrilhami
+        """
 
         # Create advertisers
         advertisers = []

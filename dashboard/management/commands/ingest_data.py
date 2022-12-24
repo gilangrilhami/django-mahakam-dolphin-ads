@@ -7,7 +7,37 @@ from advertisements.models import Advertisement
 from dashboard.models import DenormalizedAdvertisement
 
 class Command(BaseCommand):
+    """
+    This command is used to create denormalized advertisements from the existing advertisements in the database.
+
+    """
+
+    help = 'Creates denormalized advertisements from existing advertisements'
+
     def handle(self, *args, **options):
+        """
+        Query all advertisements and their related advertisement group and campaign. 
+        Pre-fetch the targeting rules and slots for each advertisement group.
+
+        For each advertisement, retrieve the advertisement group, campaign, site, 
+        slot, and tags from the targeting rules. 
+
+        Create a denormalized advertisement for each combination of site and slot and 
+        append it to a list. 
+
+        Use tqdm to display a progress bar and update it for each advertisement 
+        processed. 
+
+        After processing all advertisements, use bulk_create to create all 
+        denormalized advertisements in a single query.
+        
+        :param self: Access variables that belongs to the class
+        :param *args: Allow for an arbitrary number of arguments to be passed in
+        :param **options: Pass arguments to the command
+        :return: None
+
+        :doc-author: gilangrilhami
+        """
         # Query all advertisements
         advertisements = Advertisement.objects.select_related(
             'advertisement_group', 'advertisement_group__campaign'

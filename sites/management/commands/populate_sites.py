@@ -9,7 +9,25 @@ from sites.models (
 fake = Faker()
 
 class Command(BaseCommand):
+    """
+    Django command to create publishers, sites, and slots for testing purposes.
+    """
+
+    help = 'Create publishers, sites, and slots for testing purposes'
+
     def handle(self, *args, **options):
+        """
+        Create publishers, sites, and slots.
+        
+        This method creates 10 publishers, each with 3 sites and 10 slots.
+
+        :param self: Access variables that belongs to the class
+        :param *args: Allow for an arbitrary number of arguments to be passed in
+        :param **options: Pass arguments to the command
+        :return: None
+
+        :doc-author: giangrilhami
+        """
 
         # Create publishers
         publishers = []
