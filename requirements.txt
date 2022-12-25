@@ -4,3 +4,4 @@ Faker==15.3.4
 tqdm==4.64.1
 docutils==0.19
 django-clickhouse==1.2.1
+clickhouse-connect==0.4.7

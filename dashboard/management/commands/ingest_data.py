@@ -4,7 +4,7 @@ from django.core.management import BaseCommand
 
 from advertisements.models import Advertisement
 
-from dashboard.models import DenormalizedAdvertisement
+from dashboard.models import DenormalizedAdvertisement, ClickhouseDenormalizedAdvertisement
 
 class Command(BaseCommand):
     """
@@ -78,4 +78,4 @@ class Command(BaseCommand):
                 pbar.update(1)
 
         # Use bulk_create to create all denormalized advertisements in a single query
-        DenormalizedAdvertisement.objects.bulk_create(denormalized_advertisements)
+        ClickhouseDenormalizedAdvertisement.objects.bulk_create(denormalized_advertisements)
