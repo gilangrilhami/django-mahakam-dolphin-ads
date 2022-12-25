@@ -20,6 +20,7 @@ from project.core import views
 
 urlpatterns = [
     path("", views.index),
+    path('admin/doc/', include('django.contrib.admindocs.urls')), # https://docs.djangoproject.com/en/4.1/ref/contrib/admin/admindocs/
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
