@@ -2,7 +2,7 @@
 MahakamDolphinAds is a Django-based web application that allows businesses to create and manage their online advertising campaigns.
 
 <p align="center">
-  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/439e9e9f-899d-4fc7-a62c-162b8fefc736/dbig4vl-750fcddf-feaa-467f-b16e-b2fe3de451a6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQzOWU5ZTlmLTg5OWQtNGZjNy1hNjJjLTE2MmI4ZmVmYzczNlwvZGJpZzR2bC03NTBmY2RkZi1mZWFhLTQ2N2YtYjE2ZS1iMmZlM2RlNDUxYTYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VZWg4g6LvoCgr8AWqj3ClcVmG3kexuUVC7NHs1BrV_I" alt="Sublime's custom image" style="width:200px;">
+  <img src="./project/static/logo.png" alt="Sublime's custom image" style="width:200px;">
 </p>
 <p align="center">
     <a href="https://www.ykrasi.org/">Join conservation efforts to save the Mahakam River Dolphins</a>
