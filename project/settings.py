@@ -144,15 +144,15 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-DATABASE_ROUTERS = ['dashboard.routers.DashboardRouter']
+# DATABASE_ROUTERS = ['dashboard.routers.DashboardRouter']
 
 # django-clickhouse library setup
 CLICKHOUSE_DATABASES = {
     # Connection name to refer in using(...) method 
     'default': {
-        'db_name': 'test',
-        'username': 'default',
-        'password': ''
+        'db_name': 'db',
+        'username': 'user',
+        'password': 'password'
     }
 }
 
