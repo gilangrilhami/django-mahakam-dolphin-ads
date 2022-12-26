@@ -2,6 +2,8 @@ import random
 from faker import Faker
 from django.core.management import BaseCommand
 
+from sites.models import Slot
+
 from advertisements.models import (
     Advertiser,
     Campaign,
